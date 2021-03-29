@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="script.js" defer></script>
+    <title>Code Quiz</title>
+</head>
+  
+<body>
+
+    <header class="header">
+        <a href="javascript:viewScore();"><h3>View High Scores</h3></a>
+
+        <h3 class="time">Time: <span class="count"></span></h3>
+    </header>
+
+<section class="gamescreen">
+        <section class="intro">
+            <h1 class="h1">Code Quiz Challenge</h1>
+
+            <h3 class="text1">Try to answer the following code-related questions within the time<br>
+                limit. Keep in mind that incorrect answers will penalize your score<br>
+                and subtract 10 seconds from your time.</h3>
+
+                <button class="button1">Start Quiz!</button>
+        </section>
+
+        <section class="q1">
+            <h1 class="q1-head">Which one below is 5 factorial?</h1>
+
+                <ul class="choices">
+                   <a href="javascript:wrongAns1();"><li class="wrong">1. #5</li></a>
+                   <a href="javascript:wrongAns1();"><li class="wrong">2. *5</li></a>
+                    <a href="javascript:correctAns1()"><li class="correct">3. !5</li></a>
+                    <a href="javascript:wrongAns1();"><li class="wrong">4. ^5</li></a>
+                </ul> 
+                <h3 class="qAns1"></h3>
+        </section>
+
+        <section class="q2">
+            <h1 class="q2-head">Where is Zurich?</h1>
+
+                <ul class="choices">
+                   <a href="javascript:wrongAns2();"><li class="wrong">1. Germany</li></a>
+                   <a href="javascript:correctAns2();"><li class="correct">2. Switzerland</li></a>
+                    <a href="javascript:wrongAns2();"><li class="wrong">3. Belgium</li></a>
+                    <a href="javascript:wrongAns2();"><li class="wrong">4. Sweden</li></a>
+                </ul> 
+                <h3 class="qAns2"></h3>
+        </section>
+
+        <section class="q3">
+            <h1 class="q3-head">Which below intersects the Y axis at the same point as 3n + 2?</h1>
+
+                <ul class="choices">
+                   <a href="javascript:wrongAns3();"><li class="wrong">1. y = 6</li></a>
+                   <a href="javascript:wrongAns3();"><li class="wrong">2. y = 3</li></a>
+                    <a href="javascript:wrongAns3();"><li class="wrong">3. y = 5</li></a>
+                    <a href="javascript:correctAns3();"><li class="correct">4. y = 2</li></a>
+                </ul> 
+                <h3 class="qAns3"></h3>
+        </section>
+
+        <section class="q4">
+            <h1 class="q4-head">How many independent countries are there?</h1>
+
+                <ul class="choices">
+                   <a href="javascript:correctAns4();"><li class="correct">1. 195</li></a>
+                   <a href="javascript:wrongAns4();"><li class="wrong">2. 203</li></a>
+                    <a href="javascript:wrongAns4();"><li class="wrong">3. 138</li></a>
+                    <a href="javascript:wrongAns4();"><li class="wrong">4. 249</li></a>
+                </ul> 
+                <h3 class="qAns4"></h3>
+        </section>
+
+        <section class="q5">
+            <h1 class="q5-head">When was Google founded?</h1>
+
+                <ul class="choices">
+                   <a href="javascript:wrongAns5();"><li class="wrong">1. 1995</li></a>
+                   <a href="javascript:wrongAns5();"><li class="wrong">2. 1999</li></a>
+                    <a href="javascript:wrongAns5();"><li class="wrong">3. 1997</li></a>
+                    <a href="javascript:correctAns5();"><li class="correct">4. 1998</li></a>
+                </ul> 
+                <h3 class="qAns5"></h3>
+        </section>
+    </section>
+
+        <section class="resultsPage">
+            <h1 class="h1">All done!</h1>
+
+            <h3 class="resultText">Your final score is <span class="finalPoints"></span></h3>
+            
+            <label for ='userInitials' class="inpText">Enter Initials: </label>
+
+            <input placeholder="Your Initials" id="userInitials">
+
+                <button class="submitButton">Submit</button>
+        </section>
+
+        <section class="hiScore">
+            <h1 class="h1">High Scores</h1>
+
+            <ol class="scoreList"></ol>
+
+                <button class="goBack">Go Back</button>
+        </section>
+</body>
+
+</html>

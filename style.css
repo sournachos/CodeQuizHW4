@@ -1,0 +1,116 @@
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.header h3{
+    display: inline;
+}
+
+.time{
+    position: absolute;
+    left: 90%;
+    margin-top: 0;
+    width: 100px;
+}
+
+.intro,
+.q1,
+.q2,
+.q3,
+.q4,
+.q5,
+.resultsPage,
+.hiScore {
+    position: absolute;
+    top: 25%;
+    left: 10%;
+    width: 800px;
+    height: 250px;
+}
+
+.h1{
+    position: relative;
+    left: 35%;
+    font-size: 30px;
+}
+
+.text1{
+    position: absolute;
+    left: 23%;
+}
+
+.button1{
+    position:absolute;
+    left: 45%;
+    top: 80%;
+}
+
+
+
+.q1-head,
+.q2-head,
+.q3-head,
+.q4-head,
+.q5-head {
+    position: relative;
+    left: 30%;
+}
+
+.choices{
+    position: relative;
+    left: 30%;
+    list-style-type: none;
+    width: fit-content;
+}
+
+.wrong,
+.correct {
+    line-height: 35px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    background-color: lightgrey;
+    width: 160px;
+}
+
+a{
+   text-decoration: none;
+   color: black;
+   font-weight: 700;
+}
+
+.resultText{
+    position: absolute;
+    left: 15%;
+    bottom: 50%;
+}
+
+.inpText{
+    position: absolute;
+    top: 60%;
+    left: 15%;
+}
+
+#userInitials{
+    position: absolute;
+    top: 60%;
+    left: 30%;
+}
+
+.submitButton{
+    position:absolute;
+    left: 55%;
+    top: 60%;
+}
+
+.scoreList{
+    position: absolute;
+    left: 23%;
+}
+
+.goBack{
+    position:absolute;
+    left: 45%;
+    top: 80%;
+}
