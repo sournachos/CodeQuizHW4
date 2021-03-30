@@ -66,7 +66,7 @@ var goBack = document.querySelector('.goBack');
 // Function runs when user clicks on View High Scores in the intro page
 function viewScore() {
     intro.style.display = 'none'
-    hiScore.style.display = 'block'
+    displayingScores()
 }
 
 // Button to start the quiz, when pressed the timer starts,
@@ -245,23 +245,27 @@ submitButton.addEventListener('click', function () {
     if(initials === ''){
         return;
     }
+    
+    highscores = JSON.parse(localStorage.getItem('highscores'));
 
-    highscores.push(initials + ' ' + points);
-    userInitials.value = '';
+    if(highscores === null){
+        highscores = []
+    }
+
+    highscores.push(initials + ' ' + points)
+    localStorage.setItem('highscores', JSON.stringify(highscores));
+
+    initials = '';
     points = 100;
-    storingScores();
+    
     resultsPage.style.display = 'none'
     displayingScores();
 })
 
-function storingScores() {
-    localStorage.setItem('highscores', JSON.stringify(highscores));
-}
-
 function displayingScores(){
     hiScore.style.display = 'block'
-    localStorage.getItem('highscores',(highscores))
-   scoreList.innerHTML = '';
+    highscores = JSON.parse(localStorage.getItem('highscores'));
+    scoreList.innerHTML = '';
 
     for (var q = 0; q < highscores.length; q++) {
         var scor = highscores[q];
@@ -278,7 +282,5 @@ function displayingScores(){
 goBack.addEventListener('click', function () {
     document.location.reload()
 })
-
-
 
 
